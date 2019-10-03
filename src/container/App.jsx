@@ -20,7 +20,7 @@ const App = () => {
       { initialState.mylist.length > 0 && (
         <Categories titulo='Mi Lista'>
           <CarruselContainer>
-            <CarruselItems />
+            {initialState.mylist.map((item) => <CarruselItems key={item.id} {...item} />) }
           </CarruselContainer>
         </Categories>
       )}
@@ -29,7 +29,7 @@ const App = () => {
           {initialState.trends.map((item) => <CarruselItems key={item.id} {...item} />) }
         </CarruselContainer>
       </Categories>
-      <Categories titulo='Originales'>
+      <Categories titulo='Originales de Platzi Video'>
         <CarruselContainer>
           {initialState.originals.map((item) => <CarruselItems key={item.id} {...item} />) }
         </CarruselContainer>
