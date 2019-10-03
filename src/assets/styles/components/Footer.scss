@@ -1,0 +1,16 @@
+@import '../global.scss';
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 5% 0 3% 0;
+    & a{
+        text-decoration: none;
+        color:$color-claro;
+    }
+    & a:hover{
+        text-decoration: none;
+        color: $color-primario;
+    }
+}
