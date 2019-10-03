@@ -1,52 +1,37 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Header from '../components/Header';
 import Search from '../components/Search';
-import '../assets/styles/app.scss';
 import CarruselContainer from '../components/CarruselContainer';
 import CarruselItems from '../components/CarruselItems';
 import Categories from '../components/Categories';
 import Footer from '../components/Footer';
+import UseInitialState from '../hooks/UseInitialState'
+import '../assets/styles/app.scss';
 
-const App = () => (
-  <div className='app'>
-    <Header />
-    <Search />
-    <Categories titulo='Mi Lista'>
-      <CarruselContainer>
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-      </CarruselContainer>
-    </Categories>
-    <Categories titulo='Nuevo en Platzi Videos'>
-      <CarruselContainer>
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-        <CarruselItems />
-      </CarruselContainer>
-    </Categories>
-    <Footer />
-  </div>
-);
+const API = 'http://localhost:3000/initalState';
+
+const App = () => {
+  const initialState = UseInitialState(API);
+  return (
+    <div className='app'>
+      <Header />
+      <Search />
+      { initialState.mylist.length > 0 && (
+        <Categories titulo='Mi Lista'>
+          <CarruselContainer>
+            <CarruselItems />
+          </CarruselContainer>
+        </Categories>
+      )}
+      <Categories titulo='Tendencia'>
+        <CarruselContainer>
+          {initialState.trends.map((item) => <CarruselItems key={item.id} {...item} />) }
+        </CarruselContainer>
+      </Categories>
+      <Footer />
+    </div>
+  );
+};
 
 export default App;
