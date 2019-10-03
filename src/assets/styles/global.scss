@@ -1,0 +1,36 @@
+/* Variables */
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+/* variables  */
+
+$color-primario: #21c08b;
+$color-segundario: #5c1dfc;
+$color-claro: #fff;
+$color-oscuro: #000;
+$font-primaria: 'Josefin Sans', sans-serif;
+$font-size-primaria: 20px;
+
+/* backgound */
+@mixin fondoDegradadoVerdeMorado {
+    background: $color-primario;
+    background: -moz-linear-gradient(top, $color-primario 0%, $color-segundario 100%);
+    background: -webkit-gradient(top, left bottom, color-stop(0%, $color-primario), color-stop(100%, $color-segundario));
+    background: -webkit-linear-gradient(top, $color-primario (0%, $color-segundario) 100%);
+    background: -o-linear-gradient(top, $color-primario 0%, $color-segundario 100%);
+    background: -ms-linear-gradient(top, $color-primario 0%, $color-segundario 100%);
+    background: linear-gradient(top, $color-primario 0%, $color-segundario 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-primario', endColorstr='$color-segundario', GradientType=0 );
+}
+
+.fondoMorado{
+    background-color: $color-segundario;
+}
+
+
+
+body{
+    margin: 0%;
+    color: $color-claro;
+    font-family: $font-primaria;
+    font-size: $font-size-primaria;
+}
