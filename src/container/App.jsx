@@ -29,6 +29,11 @@ const App = () => {
           {initialState.trends.map((item) => <CarruselItems key={item.id} {...item} />) }
         </CarruselContainer>
       </Categories>
+      <Categories titulo='Originales'>
+        <CarruselContainer>
+          {initialState.originals.map((item) => <CarruselItems key={item.id} {...item} />) }
+        </CarruselContainer>
+      </Categories>
       <Footer />
     </div>
   );
