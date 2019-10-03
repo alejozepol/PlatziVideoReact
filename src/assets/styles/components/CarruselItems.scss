@@ -1,0 +1,46 @@
+.carrusel--item{
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    position: relative;
+    color: #fff;
+}
+.carrusel--item:hover ~ .carrusel--item{
+transform: translate3d(100px,0,0);
+}
+.carrusel__contenedor:hover .carrusel--item{
+    opacity: 0.3;
+}
+.carrusel__contenedor:hover .carrusel--item:hover{
+    transform: scale(1.5);
+    opacity: 1;
+
+}
+.carrusel--item__img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+.carrusel--item__detalle{
+    background: linear-gradient(top, #fff 0%, #fff 100%);
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    text-align: center;
+}
+
+.carrusel--item:hover .carrusel--item__detalle{
+    opacity: 1;
+}

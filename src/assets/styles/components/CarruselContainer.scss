@@ -1,0 +1,25 @@
+@import '../global.scss';
+.carrusel{
+    overflow-x: scroll;
+    position: relative;
+    padding: 0% 1% 0% 1%; 
+    &::-webkit-scrollbar{
+        height: 5px;
+    }
+    &::-webkit-scrollbar-thumb{
+        border-radius: 30px;
+        height: 5px;
+        background: fade-out($color-claro, 0.8)
+    
+    }
+    &::-webkit-scrollbar-thumb:hover{
+        display: block;
+        box-shadow: 0 0 2px 1px fade-out($color-oscuro, 0.5);
+        background: $color-claro;
+    }
+    &__contenedor{
+        white-space: nowrap;
+        margin: 5% 0;    
+    }
+
+}
