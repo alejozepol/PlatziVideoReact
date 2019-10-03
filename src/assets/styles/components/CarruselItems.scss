@@ -11,8 +11,9 @@
     position: relative;
     color: #fff;
 }
+
 .carrusel--item:hover ~ .carrusel--item{
-transform: translate3d(100px,0,0);
+    transform: translate3d(100px,0,0);
 }
 .carrusel__contenedor:hover .carrusel--item{
     opacity: 0.3;
