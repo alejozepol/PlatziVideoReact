@@ -22,7 +22,7 @@ $font-size-primaria: 20px;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-primario', endColorstr='$color-segundario', GradientType=0 );
 }
 
-.fondoMorado{
+@mixin fondoMorado{
     background-color: $color-segundario;
 }
 
