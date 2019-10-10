@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   min-height: calc(100vh);
-  @include fondoMorado;
+  @include fondoDegradadoVerdeMorado;
   &__container{
     border: 1px solid #fff;
     border-radius: 30px;
