@@ -6,15 +6,15 @@ import CarruselContainer from '../components/CarruselContainer';
 import CarruselItems from '../components/CarruselItems';
 import Categories from '../components/Categories';
 import Footer from '../components/Footer';
-import UseInitialState from '../hooks/UseInitialState'
-import '../assets/styles/app.scss';
+import UseInitialState from '../hooks/UseInitialState';
+import '../assets/styles/Home.scss';
 
 const API = 'http://localhost:3000/initalState';
 
-const App = () => {
+const Home = () => {
   const initialState = UseInitialState(API);
   return (
-    <div className='app'>
+    <div className='Home'>
       <Header />
       <Search />
       { initialState.mylist.length > 0 && (
@@ -39,4 +39,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;
