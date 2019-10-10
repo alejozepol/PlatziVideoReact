@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/styles/components/Header.scss';
 import logo from '../assets/static/logo-platzi-video-BW2.png';
-import userIcon from '../assets/static/ico-perfil.svg';
+import userIcon from '../assets/static/ico-perfil.png';
 
 const Header = () => (
   <header className='header'>
