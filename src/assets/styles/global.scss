@@ -26,11 +26,10 @@ $font-size-primaria: 20px;
     background-color: $color-segundario;
 }
 
-
-
 body{
     margin: 0%;
     color: $color-claro;
     font-family: $font-primaria;
     font-size: $font-size-primaria;
+    @include fondoMorado;
 }

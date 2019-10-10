@@ -1,0 +1,37 @@
+@import 'global.scss';
+
+.NotFound{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: -webkit-fill-available;
+  &-emogi{
+    width: 50%;
+  }
+  &-text{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff
+    & h1{
+      font-size: 878%;
+      margin: 0%;    
+    }
+    & h2 {
+      font-size:151%;
+      margin: 0%;
+    }
+  }
+}
+
+.pulse {
+  animation-name: pulse;
+  animation-duration: 1s;
+}
+@keyframes pulse {
+  0% { transform: scale(0.4); }
+  50% { transform: scale(.9s); }
+  100% { transform: scale(1); }
+}
