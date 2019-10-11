@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Proptypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { setFavorite, deleteFavorite } from '../actions';
 import icoRemove from '../assets/static/remove-icon.png';
 import '../assets/styles/components/CarruselItems.scss';
@@ -22,12 +23,14 @@ const CarruselItems = (props) => {
       <img className='carrusel--item__img' src={cover} alt={title} />
       <div className='carrusel--item__detalle'>
         <div>
-          <img
-            src='https://img.icons8.com/bubbles/50/000000/play.png'
-            alt='play'
-            width='50px'
-            height='50px'
-          />
+          <Link to={`player/${id}`}>
+            <img
+              src='https://img.icons8.com/bubbles/50/000000/play.png'
+              alt='play'
+              width='50px'
+              height='50px'
+            />
+          </Link>
           {isList ? (
             <img
               src={icoRemove}
