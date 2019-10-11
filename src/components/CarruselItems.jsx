@@ -1,18 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Proptypes from 'prop-types';
-import { setFavorite } from '../actions';
+import { setFavorite, deleteFavorite } from '../actions';
+import icoRemove from '../assets/static/remove-icon.png';
 import '../assets/styles/components/CarruselItems.scss';
 
 const CarruselItems = (props) => {
-  const { cover, title, year, contentRating, duration } = props;
+  const { id, cover, title, year, contentRating, duration, isList } = props;
 
   const handleSetFavorite = () => {
     props.setFavorite({
-      cover, title, year, contentRating, duration,
+      id, cover, title, year, contentRating, duration,
     });
   };
 
+  const handleDelteFavorite = (itemId) => {
+    props.deleteFavorite(itemId);
+  };
   return (
     <div className='carrusel--item'>
       <img className='carrusel--item__img' src={cover} alt={title} />
@@ -24,13 +28,22 @@ const CarruselItems = (props) => {
             width='50px'
             height='50px'
           />
-          <img
-            src='https://img.icons8.com/plasticine/100/000000/plus-math.png'
-            alt='mas'
-            width='50px;'
-            height='50px;'
-            onClick={handleSetFavorite}
-          />
+          {isList ? (
+            <img
+              src={icoRemove}
+              alt='Eliminar'
+              onClick={() => handleDelteFavorite(id)}
+            />
+          ) : (
+            <img
+              src='https://img.icons8.com/plasticine/100/000000/plus-math.png'
+              alt='mas'
+              width='50px;'
+              height='50px;'
+              onClick={handleSetFavorite}
+            />
+          )}
+
         </div>
         <p className='carrusel--item__detalle--titulo'>{title}</p>
         <p className='carrusel--item__detalle--subtitulo'>
@@ -51,6 +64,7 @@ CarruselItems.prototype = {
 
 const mapDispatchToProps = {
   setFavorite,
+  deleteFavorite,
 };
 
 export default connect(null, mapDispatchToProps)(CarruselItems);
