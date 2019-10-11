@@ -1,38 +1,43 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
+import { connect } from 'react-redux';
 import Search from '../components/Search';
 import CarruselContainer from '../components/CarruselContainer';
 import CarruselItems from '../components/CarruselItems';
 import Categories from '../components/Categories';
-import UseInitialState from '../hooks/UseInitialState';
 import '../assets/styles/Home.scss';
 
-const API = 'http://localhost:3000/initalState';
-
-const Home = () => {
-  const initialState = UseInitialState(API);
+const Home = ({ myList, trends, originals }) => {
   return (
-    <>
+    <div>
       <Search />
-      { initialState.mylist.length > 0 && (
+      { myList.length > 0 && (
         <Categories titulo='Mi Lista'>
           <CarruselContainer>
-            {initialState.mylist.map((item) => <CarruselItems key={item.id} {...item} />) }
+            {mylist.map((item) => <CarruselItems key={item.id} {...item} />) }
           </CarruselContainer>
         </Categories>
       )}
       <Categories titulo='Tendencia'>
         <CarruselContainer>
-          {initialState.trends.map((item) => <CarruselItems key={item.id} {...item} />) }
+          {trends.map((item) => <CarruselItems key={item.id} {...item} />) }
         </CarruselContainer>
       </Categories>
       <Categories titulo='Originales de Platzi Video'>
         <CarruselContainer>
-          {initialState.originals.map((item) => <CarruselItems key={item.id} {...item} />) }
+          {originals.map((item) => <CarruselItems key={item.id} {...item} />) }
         </CarruselContainer>
       </Categories>
-    </>
+    </div>
   );
 };
 
-export default Home;
+const mapStatecToProps = (state) => {
+  return {
+    myList: state.myList,
+    trends: state.trends,
+    originals: state.originals,
+  };
+};
+
+export default connect(mapStatecToProps, null)(Home);
