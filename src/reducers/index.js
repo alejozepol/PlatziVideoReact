@@ -9,7 +9,7 @@ const reduce = (state, action) => {
     case 'DELETE_FAVORETE':
       return {
         ...state,
-        myList: state.myList.filter((items) => items.id !== action.payload),
+        myList: state.myList.filter((items) => items.id !== action.payload.id),
       };
     case 'LOGIN_REQUEST':
       return {
