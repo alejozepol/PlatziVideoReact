@@ -20,8 +20,7 @@ const Home = ({ myList, trends, originals }) => {
                 {...item}
                 isList
               />
-            ))
-            }
+            ))}
           </CarruselContainer>
         </Categories>
       )}

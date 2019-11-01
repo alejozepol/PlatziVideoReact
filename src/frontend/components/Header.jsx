@@ -64,7 +64,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   logoutRequest,
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
 

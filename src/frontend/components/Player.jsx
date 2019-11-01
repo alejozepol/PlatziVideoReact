@@ -1,7 +1,8 @@
+/* eslint-disable react/destructuring-assignment */
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getVideoSource } from '../actions';
-import  NotFound from '../container/NotFound';
+import NotFound from '../container/NotFound';
 import '../assets/styles/components/Player.scss';
 
 const Player = (props) => {
