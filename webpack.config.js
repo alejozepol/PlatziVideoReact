@@ -52,12 +52,6 @@ module.exports = {
         },
       },
       {
-        test: /\.html$/,
-        use: {
-          loader: 'html-loader',
-        },
-      },
-      {
         test: /\.(s*)css$/,
         use: [{
           loader: MiniCssExtraxtPlugin.loader,
@@ -65,6 +59,9 @@ module.exports = {
         'css-loader',
         'sass-loader',
         'postcss-loader',
+        {
+          loader: 'sass-loader',
+        },
         ],
       },
       {
