@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import { Router } from 'react-router';
+import { createBrowserHistory } from 'history';
 import reducer from './reducers';
 import App from './routes/app';
 
@@ -172,10 +174,13 @@ const inicialState = {
 };
 
 const store = createStore(reducer, inicialState);
+const history = createBrowserHistory();
 
 ReactDom.render(
   <Provider store={store}>
-    <App />
+    <Router history={history}>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById('app'),
 );
