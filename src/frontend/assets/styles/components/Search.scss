@@ -1,64 +1,62 @@
-.buscador{
-    margin-top: 12%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.buscador {
+	margin-top: 12%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
-.buscador h2{
-    color: #fff;;
-}
-.input{
-   
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 16px;
-    outline: none;
-    color: #fff;
-    
-}
-.input::placeholder{
-    color: #fff;
-}
-.inputRedondeado{
-    padding-left: 3%;
-    border: 2px solid #fff;
-    border-radius: 30px;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-.inputLineaInferior{
-    border-top: 0px;
-    border-bottom: 2px solid #fff;
-    border-left: 0px;
-    border-right: 0px;
-    background-color: transparent;
-}
-.inputLineaInferior::placeholder{
-    text-align: center;
 
+.buscador h2 {
+	color: #fff;
 }
-.botonRedondoBlanco{
-    color: #fff;
-    border: 1px solid #fff;
-    background-color: #ffffff33;
-    border-radius: 30px;
-    height: 50px;
-    width: 70%;
-    -webkit-box-shadow: 0px 0px 45px -14px #fff;
-    -moz-box-shadow: 0px 0px 45px -14px #fff;
-    box-shadow: 0px 0px 45px -14px #fff;
+.input {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 16px;
+	outline: none;
+	color: #fff;
 }
-.botonRedondoBlanco:hover{
-    color: #000;
-    border: 1px solid #fff;
-    background-color: #E6AF2E;
-    border-radius: 30px;
-    height: 50px;
-    width: 70%;
-    -webkit-box-shadow: 0px 0px 45px -14px #fff;
-    -moz-box-shadow: 0px 0px 45px -14px #fff;
-    box-shadow: 0px 0px 45px -14px #fff;
+.input::placeholder {
+	color: #fff;
 }
-.buscador input{
-    width: 80%;
-    height: 50px;
+.inputRedondeado {
+	padding-left: 3%;
+	border: 2px solid #fff;
+	border-radius: 30px;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+.inputLineaInferior {
+	border-top: 0px;
+	border-bottom: 2px solid #fff;
+	border-left: 0px;
+	border-right: 0px;
+	background-color: transparent;
+}
+.inputLineaInferior::placeholder {
+	text-align: center;
+}
+.botonRedondoBlanco {
+	color: #fff;
+	border: 1px solid #fff;
+	background-color: #ffffff33;
+	border-radius: 30px;
+	height: 50px;
+	width: 70%;
+	-webkit-box-shadow: 0px 0px 45px -14px #fff;
+	-moz-box-shadow: 0px 0px 45px -14px #fff;
+	box-shadow: 0px 0px 45px -14px #fff;
+}
+.botonRedondoBlanco:hover {
+	color: #000;
+	border: 1px solid #fff;
+	background-color: #e6af2e;
+	border-radius: 30px;
+	height: 50px;
+	width: 70%;
+	-webkit-box-shadow: 0px 0px 45px -14px #fff;
+	-moz-box-shadow: 0px 0px 45px -14px #fff;
+	box-shadow: 0px 0px 45px -14px #fff;
+}
+.buscador input {
+	width: 80%;
+	height: 50px;
 }
