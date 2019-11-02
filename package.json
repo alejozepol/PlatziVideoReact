@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --mode development ",
+    "build": "webpack-cli --config webpack.conf.js --colors",
+    "prod": "node src/server/index.js --exact babel-node",
     "run-json": "json-server initialState.json",
     "dev": "nodemon src/server/index.js --exact babel-node"
   },
@@ -56,6 +55,7 @@
     "autoprefixer": "^9.7.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-assign": "^6.22.0",
+    "compression-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
     "html-loader": "^0.5.5",
@@ -65,6 +65,7 @@
     "nodemon": "^1.19.4",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.0",
+    "terser-webpack-plugin": "^2.2.1",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",
     "webpack-dev-middleware": "^3.7.2",
