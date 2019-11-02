@@ -1,6 +1,7 @@
 import express from 'express';
 import dovenv from 'dotenv';
 import webpack from 'webpack';
+import main from './routes/main';
 
 dovenv.config();
 
@@ -27,13 +28,11 @@ if (ENV === 'development') {
   app.use(webpackHotMiddleware(compiler));
 }
 
-app.get('*', (req, res) => {
-  
-});
+app.get('*', main);
 
 app.listen(PORT, (err) => {
   if (err) {
     console.log(err);
   }
-  console.log(`El servidor se inicio exitosamente en el puerto ${PORT}`)
+  console.log(`El servidor se inicio exitosamente en el puerto ${PORT}`);
 });

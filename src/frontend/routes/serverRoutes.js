@@ -2,32 +2,32 @@ import Home from '../container/Home';
 import Login from '../container/Login';
 import Register from '../container/Register';
 import NotFound from '../container/NotFound';
-import Player from '../components/Player';
+/* import Player from '../component/Player'; */
 
 const serverRoutes = [
   {
     path: '/',
-    components: Home,
+    component: Home,
     exact: true,
   },
   {
     path: '/login',
-    components: Login,
+    component: Login,
     exact: true,
   },
   {
     path: '/registro',
-    components: Register,
+    component: Register,
     exact: true,
   },
-  {
+/*   {
     path: '/player/:id',
-    components: Player,
+    component: Player,
     exact: true,
-  },
+  }, */
   {
     name: 'NotFound',
-    components: NotFound,
+    component: NotFound,
   },
 ];
 
