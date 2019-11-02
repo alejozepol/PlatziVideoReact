@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import { hydrate } from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, compose } from 'redux';
 import { Router } from 'react-router';
@@ -12,7 +12,7 @@ const composeEnhacers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, inicialState, composeEnhacers());
 const history = createBrowserHistory();
 
-ReactDom.render(
+hydrate(
   <Provider store={store}>
     <Router history={history}>
       <App />
