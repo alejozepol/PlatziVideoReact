@@ -73,6 +73,6 @@ typings/
 yarn-error.log
 
 # Build
-dist/
+dist
 
 src/server/public
